@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <div class="game-container glass-panel">
+        <div class="header">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-crosshairs"></i>
+            </div>
+            <h1>Guess the Number</h1>
+            <p>I'm thinking of a number between 1 and 100.</p>
+        </div>
+
+        <div class="game-content">
+            <div class="input-section">
+                <input type="number" id="guessInput" placeholder="?" min="1" max="100" autocomplete="off">
+            </div>
+
+            <button id="guessBtn" class="btn btn-primary">Check Guess</button>
+
+            <div class="message-area">
+                <p id="message" class="message">Start guessing!</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">Attempts</span>
+                    <span id="attempts" class="value">0</span>
+                </div>
+                <!-- <div class="stat-item">
+                    <span class="label">High Score</span>
+                    <span id="highScore" class="value">-</span>
+                </div> -->
+            </div>
+        </div>
+
+        <div id="restartArea" class="restart-area hidden">
+            <button id="restartBtn" class="btn btn-secondary"><i class="fa-solid fa-rotate-right"></i> Play
+                Again</button>
+        </div>
+    </div>
+
+    <!-- Celebration Canvas -->
+    <canvas id="confetti" class="hidden"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
